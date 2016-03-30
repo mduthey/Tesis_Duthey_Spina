@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<org.eclipse.emf.ecore.haxe:HaxeModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.emf.ecore.haxe="http://haxe.unicen.edu.ar" name="Proyecto PingPong" targetFolder="build" mainClass="//@elements.0/@childrenReferences.0">
+  <elements xsi:type="org.eclipse.emf.ecore.haxe:HaxePackage" name="defaultpkg">
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="Main" containerModule="//@haxeModules.0">
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="PX" isStatic="true" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="20"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="EJEX" isStatic="true" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="20"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="EJEY" isStatic="true" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="30"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="TM" isStatic="true" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="6"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="pelx" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+        </initializer>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="pely" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+        </initializer>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="pdx" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.2"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="pdy" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.2"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="jugx" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+        </initializer>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="jugy" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+        </initializer>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="enex" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+        </initializer>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="eney" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="4"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="jugp" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="enep" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="ticpelota" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="ticene" isPrivate="true">
+        <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="convar" isStatic="true">
+        <formalParameters name="x">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeVariableDeclarationExpression">
+              <groups>
+                <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@elements.1/@childrenReferences.1"/>
+                <fragments name="sout"/>
+              </groups>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;&lt;">
+            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.16/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.16/@formalParameters.0"/>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeReturn">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.1/@haxeFields.0">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.16/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+              </expression>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@elements.1/@childrenReferences.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="cuadrado" isStatic="true">
+        <formalParameters name="x">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+        </formalParameters>
+        <formalParameters name="y">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.6">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.17/@formalParameters.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                </rightSide>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.17/@formalParameters.1"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                </rightSide>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.17/@formalParameters.0"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                  </expression>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.17/@formalParameters.1"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                  </expression>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="limites_pintar" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeVariableDeclarationExpression">
+                  <groups>
+                    <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+                    <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                    <fragments name="i"/>
+                  </groups>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeWhileStatement">
+                <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.17">
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.1/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="3"/>
+                    </expression>
+                  </statements>
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.17">
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.1/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                      </arguments>
+                    </expression>
+                  </statements>
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                      <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.1/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                    </expression>
+                  </statements>
+                </theBody>
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.1/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                </expression>
+              </statements>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeVariableDeclarationExpression">
+                  <groups>
+                    <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+                    <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                    <fragments name="i"/>
+                  </groups>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeWhileStatement">
+                <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.17">
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.2/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="3"/>
+                      </arguments>
+                    </expression>
+                  </statements>
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.17">
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                      </arguments>
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.2/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="3"/>
+                      </arguments>
+                    </expression>
+                  </statements>
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                      <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.2/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                    </expression>
+                  </statements>
+                </theBody>
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.2/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+                </expression>
+              </statements>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="barra_pintar" isStatic="true">
+        <formalParameters name="x">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+        </formalParameters>
+        <formalParameters name="y">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeVariableDeclarationExpression">
+                  <groups>
+                    <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+                    <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxePrefixExpression" operator="-">
+                        <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                      </leftSide>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                    </initializer>
+                    <fragments name="i"/>
+                  </groups>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeWhileStatement">
+                <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.17">
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.19/@formalParameters.0"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.19/@theBody/@statements.0/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                      </arguments>
+                      <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.19/@formalParameters.1"/>
+                    </expression>
+                  </statements>
+                  <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                      <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.19/@theBody/@statements.0/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                    </expression>
+                  </statements>
+                </theBody>
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.19/@theBody/@statements.0/@expression/@statements.0/@expression/@groups.0/@fragments.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                  </rightSide>
+                </expression>
+              </statements>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="barra_jugador" isStatic="true">
+        <formalParameters name="k">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.20/@formalParameters.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.1/@childrenReferences.2/@haxeFields.13"/>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                      </expression>
+                    </leftSide>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                  </rightSide>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+                </expression>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.20/@formalParameters.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.1/@childrenReferences.2/@haxeFields.12"/>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                        <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                        </expression>
+                      </rightSide>
+                    </leftSide>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                  </rightSide>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+                </expression>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="250"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.19">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.9"/>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="barra_enemiga" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.7"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.15"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="15"/>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.6"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                    </expression>
+                    <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression">
+                        <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                      </expression>
+                    </thenStatement>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.6"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                    </expression>
+                    <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                        <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                      </expression>
+                    </thenStatement>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                          <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                          </expression>
+                        </leftSide>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                      </rightSide>
+                    </expression>
+                    <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                              <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                              <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                            </expression>
+                          </leftSide>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                        </rightSide>
+                      </expression>
+                    </thenStatement>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                              <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                              <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                            </expression>
+                          </rightSide>
+                        </leftSide>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                      </rightSide>
+                    </expression>
+                    <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                              </expression>
+                            </rightSide>
+                          </leftSide>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                        </rightSide>
+                      </expression>
+                    </thenStatement>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.15"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                  </expression>
+                </statements>
+              </thenStatement>
+              <elseStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.7"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                    </leftSide>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.15"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="20"/>
+                    </rightSide>
+                  </expression>
+                  <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+                    <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                        <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                          </rightSide>
+                        </expression>
+                        <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                          <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                            <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                          </expression>
+                        </thenStatement>
+                      </expression>
+                    </statements>
+                    <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                        <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                          </rightSide>
+                        </expression>
+                        <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                          <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression">
+                            <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                          </expression>
+                        </thenStatement>
+                      </expression>
+                    </statements>
+                    <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.15"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                      </expression>
+                    </statements>
+                  </thenStatement>
+                </expression>
+              </elseStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="250"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="150"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.19">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.11"/>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="pelota_pinta" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="250"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="100"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="250"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.9">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                  </expression>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                  </expression>
+                </rightSide>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                  </expression>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                  </expression>
+                </rightSide>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+              </arguments>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="pelota_control" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+              <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.14"/>
+              <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.6"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                </expression>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.6"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                </expression>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="||">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="4"/>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                  </rightSide>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="4"/>
+                    </expression>
+                    <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                        <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.12"/>
+                      </expression>
+                    </thenStatement>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                      </rightSide>
+                    </expression>
+                    <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                      <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                        <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.13"/>
+                      </expression>
+                    </thenStatement>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                    </rightSide>
+                  </expression>
+                </statements>
+                <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                    </rightSide>
+                  </expression>
+                </statements>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                          <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                          </expression>
+                        </rightSide>
+                      </leftSide>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                    </rightSide>
+                  </leftSide>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.8"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                        <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                        </expression>
+                      </rightSide>
+                    </rightSide>
+                  </rightSide>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.9"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                  </rightSide>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.7"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+                </expression>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&amp;&amp;">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                        <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                        <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                          <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                            <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                            <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                          </expression>
+                        </rightSide>
+                      </leftSide>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                    </rightSide>
+                  </leftSide>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="&lt;=">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                      <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.10"/>
+                      <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                        <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="/">
+                          <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.3"/>
+                          <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                        </expression>
+                      </rightSide>
+                    </rightSide>
+                  </rightSide>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.11"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                  </rightSide>
+                </rightSide>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.7"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="1"/>
+                </expression>
+              </thenStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.6"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                </expression>
+              </thenStatement>
+              <elseStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.4"/>
+                </expression>
+              </elseStatement>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="==">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.7"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+              </expression>
+              <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                </expression>
+              </thenStatement>
+              <elseStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.5"/>
+                </expression>
+              </elseStatement>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="juego_estadisticas" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="200"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="200"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="200"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.1">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeStringLiteral" escapedValue="&quot;PUNTOS JUGADOR&quot;"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.1">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="8"/>
+                  </expression>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeStringLiteral" escapedValue="&quot;PUNTOS ENEMIGO&quot;"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.2">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.1/@childrenReferences.2/@haxeFields.14"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.1">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.16">
+                <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.12"/>
+              </arguments>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.1">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeParenthizedExpression">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="-">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="5"/>
+                  </expression>
+                </leftSide>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="2"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.16">
+                <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.13"/>
+              </arguments>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="main" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeVariableDeclarationExpression">
+              <groups>
+                <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+                <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.7"/>
+                <fragments name="key"/>
+              </groups>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.10">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.2"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0"/>
+              </arguments>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeWhileStatement">
+            <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.14"/>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxePostfixExpression" isIncrement="true">
+                  <operand xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.15"/>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.5">
+                  <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="10"/>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+                  <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.25/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+                  <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.7"/>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.3"/>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.18"/>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.20">
+                  <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.25/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.21"/>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeIfStatement">
+                  <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator=">=">
+                    <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.14"/>
+                    <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="10"/>
+                  </expression>
+                  <thenStatement xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                    <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.23"/>
+                  </thenStatement>
+                </expression>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.22"/>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.24"/>
+              </statements>
+              <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.4"/>
+              </statements>
+            </theBody>
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="!=">
+              <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.25/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+              <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.1/@childrenReferences.2/@haxeFields.11"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.2/@haxeFields.8"/>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeReturn">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+    </childrenReferences>
+  </elements>
+  <elements xsi:type="org.eclipse.emf.ecore.haxe:HaxePackage" name="system">
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="String" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.16/@type" containerModule="//@haxeModules.1"/>
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="Stringstream" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.16/@theBody/@statements.0/@expression/@groups.0/@type" containerModule="//@haxeModules.2">
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="str">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+    </childrenReferences>
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="CPPAutoGen" containerModule="//@haxeModules.3">
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="color_rgb" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="texto" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="color" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="borra" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="refresca" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="espera" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="rectangulo_lleno" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="tecla" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="vcierra" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="circulo_lleno" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="vredimensiona" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="ESCAPE">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="DERECHA">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="IZQUIERDA">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="BLANCO">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+    </childrenReferences>
+  </elements>
+  <referenced xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="Int" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.0/@type //@elements.0/@childrenReferences.0/@haxeFields.1/@type //@elements.0/@childrenReferences.0/@haxeFields.2/@type //@elements.0/@childrenReferences.0/@haxeFields.3/@type //@elements.0/@childrenReferences.0/@haxeFields.4/@type //@elements.0/@childrenReferences.0/@haxeFields.5/@type //@elements.0/@childrenReferences.0/@haxeFields.8/@type //@elements.0/@childrenReferences.0/@haxeFields.9/@type //@elements.0/@childrenReferences.0/@haxeFields.10/@type //@elements.0/@childrenReferences.0/@haxeFields.11/@type //@elements.0/@childrenReferences.0/@haxeFields.12/@type //@elements.0/@childrenReferences.0/@haxeFields.13/@type //@elements.0/@childrenReferences.0/@haxeFields.14/@type //@elements.0/@childrenReferences.0/@haxeFields.15/@type //@elements.0/@childrenReferences.0/@haxeFields.16/@formalParameters.0/@type //@elements.0/@childrenReferences.0/@haxeFields.17/@formalParameters.0/@type //@elements.0/@childrenReferences.0/@haxeFields.17/@formalParameters.1/@type //@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.1/@expression/@statements.0/@expression/@groups.0/@type //@elements.0/@childrenReferences.0/@haxeFields.18/@theBody/@statements.2/@expression/@statements.0/@expression/@groups.0/@type //@elements.0/@childrenReferences.0/@haxeFields.19/@formalParameters.0/@type //@elements.0/@childrenReferences.0/@haxeFields.19/@formalParameters.1/@type //@elements.0/@childrenReferences.0/@haxeFields.19/@theBody/@statements.0/@expression/@statements.0/@expression/@groups.0/@type //@elements.0/@childrenReferences.0/@haxeFields.20/@formalParameters.0/@type //@elements.0/@childrenReferences.0/@haxeFields.25/@theBody/@statements.0/@expression/@groups.0/@type //@elements.0/@childrenReferences.0/@haxeFields.25/@type"/>
+  <referenced xsi:type="org.eclipse.emf.ecore.haxe:HaxeEnum" name="Void" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.17/@type //@elements.0/@childrenReferences.0/@haxeFields.18/@type //@elements.0/@childrenReferences.0/@haxeFields.19/@type //@elements.0/@childrenReferences.0/@haxeFields.20/@type //@elements.0/@childrenReferences.0/@haxeFields.21/@type //@elements.0/@childrenReferences.0/@haxeFields.22/@type //@elements.0/@childrenReferences.0/@haxeFields.23/@type //@elements.0/@childrenReferences.0/@haxeFields.24/@type //@elements.1/@childrenReferences.1/@haxeFields.0/@type //@elements.1/@childrenReferences.2/@haxeFields.0/@type //@elements.1/@childrenReferences.2/@haxeFields.1/@type //@elements.1/@childrenReferences.2/@haxeFields.2/@type //@elements.1/@childrenReferences.2/@haxeFields.3/@type //@elements.1/@childrenReferences.2/@haxeFields.4/@type //@elements.1/@childrenReferences.2/@haxeFields.5/@type //@elements.1/@childrenReferences.2/@haxeFields.6/@type //@elements.1/@childrenReferences.2/@haxeFields.7/@type //@elements.1/@childrenReferences.2/@haxeFields.8/@type //@elements.1/@childrenReferences.2/@haxeFields.9/@type //@elements.1/@childrenReferences.2/@haxeFields.10/@type //@elements.1/@childrenReferences.2/@haxeFields.11/@type //@elements.1/@childrenReferences.2/@haxeFields.12/@type //@elements.1/@childrenReferences.2/@haxeFields.13/@type //@elements.1/@childrenReferences.2/@haxeFields.14/@type"/>
+  <referenced xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="Bool" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.6/@type //@elements.0/@childrenReferences.0/@haxeFields.7/@type"/>
+  <haxeModules name="Main" thePackage="//@elements.0" theElements="//@elements.0/@childrenReferences.0"/>
+  <haxeModules name="String" thePackage="//@elements.1" theElements="//@elements.1/@childrenReferences.0"/>
+  <haxeModules name="Stringstream" thePackage="//@elements.1" theElements="//@elements.1/@childrenReferences.1"/>
+  <haxeModules name="CPPAautogen" thePackage="//@elements.1" theElements="//@elements.1/@childrenReferences.2"/>
+</org.eclipse.emf.ecore.haxe:HaxeModel>

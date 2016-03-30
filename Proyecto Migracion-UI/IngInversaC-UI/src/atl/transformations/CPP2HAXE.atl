@@ -1,0 +1,1167 @@
+-- @path cpp=/CPP2HAXE/cppNewv2.ecore
+-- @path haxe=/CPP2HAXE/haxe.ecore
+
+module CPP2HAXE;
+
+create OUT: haxe from IN: cpp;
+
+helper context cpp!CppPackage
+def: get_packages(): Sequence (cpp!CppPackage) =
+        self.childrenReferences->iterate (elem;
+                acc:Sequence (cpp!CppPackage)= Sequence{} |
+                if ( elem.oclIsTypeOf(cpp!CppPackage) )
+                        then acc->append(elem)->union(elem.get_packages())
+                else
+                        acc->union(Sequence{})
+                endif
+        );
+ 
+helper context cpp!CppModel
+def: get_allpackages(): Sequence (cpp!CppPackage) =
+        self.elements->iterate (elem;
+                acc:Sequence (cpp!CppPackage)= Sequence{} |
+                if ( elem.oclIsTypeOf(cpp!CppPackage) )
+                        then acc->append(elem)->union(elem.get_packages())
+                else
+                        acc->union(Sequence{})
+                endif
+        );
+ 
+helper context cpp!CppPackage
+def: get_allclassfiles(): Sequence (cpp!CppClassFile) =
+        self.childrenReferences->iterate (elem;
+                acc:Sequence (cpp!CppClassFile) = Sequence{} |
+                if( elem.oclIsTypeOf(cpp!CppClassFile) )
+                        then acc->append(elem)
+                else
+                        acc->union(Sequence{})
+                endif
+        );
+ 
+helper context cpp!CppModel
+def: get_classfiles(): Sequence (cpp!CppClassfile) =
+        self.get_allpackages() -> collect(package | package.get_allclassfiles());
+
+helper context cpp!CppPackage
+def: get_childrenreferences(): Sequence(cpp!CppPathReferentiable) =
+	self.childrenReferences->iterate (elem;
+		acc:Sequence(cpp!CppPathReferentiable) = Sequence{} |
+		if( elem.oclIsTypeOf(cpp!CppPackage) )
+			then acc->append(elem)
+		else
+			if( elem.oclIsTypeOf(cpp!CppClassFile) )
+				then acc->union(elem.elements)
+			else
+				acc->append(Sequence{})
+			endif
+		endif
+	);
+
+helper context cpp!CppClass
+def: get_superclass(): haxe!HaxeClassifierAccess =
+	if self.superClass.isEmpty() then	
+		OclUndefined
+	else
+		thisModule.get_generalization(self.superClass->first())
+	endif;
+
+helper context cpp!CppClassFile
+def: get_imports(): Sequence(haxe!HaxeImportDeclaration) =
+	if self.imports.isEmpty() then
+		Sequence{}
+	else
+		self.imports->iterate (elem;
+			acc:Sequence(haxe!HaxeImportDeclaration) = Sequence{} |
+			if elem.pathImport.oclIsUndefined() then
+				acc->append(Sequence{})
+			else
+				elem.pathImport.elements->iterate(elem2;
+					acc2:Sequence(haxe!HaxeImportDeclaration) = Sequence{} |
+					if elem2.oclIsTypeOf(cpp!CppClass) then
+						acc2->append(thisModule.get_classimport(elem2))
+					else
+						acc2->append(Sequence{})
+					endif
+				)
+			endif
+		)
+	endif;
+
+
+helper context cpp!CppForStatement
+def: get_blockStatements(): Sequence(cpp!CppExpression) =
+	if self.theBody = OclUndefined then
+		Sequence{}
+	else
+		if self.theBody.oclIsTypeOf(cpp!CppBlock) then
+			self.theBody.get_statements()
+		else
+			if( self.theBody.oclIsTypeOf(cpp!CppAssignamentStatement) 
+				or self.theBody.oclIsTypeOf(cpp!CppMethodInvocation) 
+				or self.theBody.oclIsTypeOf(cpp!CppPostfixExpression)) then 
+			Sequence{thisModule.statementize(self.theBody)}
+			else
+				Sequence{self.theBody}
+			endif
+		endif
+	endif;
+   
+helper context cpp!CppBlock
+def: get_statements(): Sequence(cpp!CppExpression) =
+	self.statements->iterate (elem;
+		acc:Sequence(cpp!CppExpression) = Sequence{} |
+		if( elem.oclIsTypeOf(cpp!CppAssignamentStatement) 
+				or elem.oclIsTypeOf(cpp!CppMethodInvocation) 
+				or elem.oclIsTypeOf(cpp!CppPostfixExpression)) then 
+			acc->append(thisModule.statementize(elem))
+		else
+			acc->append(elem)
+		endif
+	);
+
+helper context cpp!CppVariableDeclarationGroup
+def: getInitializer(): haxe!HaxeExpression = 
+	if ( self.fragments->notEmpty() ) then
+		if( self.fragments->asSequence()->first() = OclUndefined ) then
+			OclUndefined
+		else
+			self.fragments->asSequence()->first().initializer
+		endif
+	else
+		OclUndefined
+	endif;
+
+helper context cpp!CppVariableDeclarationGroup
+def: isPointer(): Boolean =
+	if ( self.fragments->notEmpty() ) then
+		if( self.fragments->asSequence()->first() = OclUndefined ) then
+			false
+		else
+			( self.fragments->asSequence()->first().vartype = #POINTER)
+		endif
+	else
+		false
+	endif;
+
+helper context cpp!CppTypeAccess
+def: isCharType(): Boolean = 
+	if( self.access = OclUndefined ) then
+		false
+	else
+		if(self.access->oclIsTypeOf(cpp!CppCharType)) then
+			true
+		else
+			false
+		endif
+	endif;
+
+helper context cpp!CppTypedElement
+def: isCharType(): Boolean = 
+	if( self.type = OclUndefined) then
+		false
+	else
+		self.type.isCharType()
+	endif;
+
+helper context cpp!CppVariableDeclarationFragment
+def: isCharType(): Boolean =
+	if( self.variablesContainer = OclUndefined) then
+		false
+	else
+		self.variablesContainer.isCharType()
+	endif;
+
+helper context cpp!CppTypeAccess
+def: isPrimitive(): Boolean = 
+	if( self.access = OclUndefined ) then
+		false
+	else
+		if(self.access->oclIsKindOf(cpp!CppPrimitiveType)) then
+			true
+		else
+			false
+		endif
+	endif;
+
+helper context cpp!CppTypedElement
+def: isPrimitive(): Boolean =
+	if( self.type = OclUndefined) then 
+		false
+	else
+		self.type.isPrimitive()
+	endif;
+
+helper context cpp!CppClassifier 
+def: getTypeConstructor(): cpp!CppMemberFunction =
+	self.cppFields->select(x | x.oclIsTypeOf(cpp!CppConstructor))->first()
+	;
+
+helper context cpp!CppTypeAccess
+def: typeHasConstructor(): Boolean =
+	if( not self.access->oclIsKindOf(cpp!CppClassifier) ) then
+		false
+	else 
+		if(self.access.getTypeConstructor() = OclUndefined) then
+			false
+		else
+			true
+		endif
+	endif;
+
+helper def: assignMap: Map(cpp!CppAssignmentOperator, haxe!HaxeAssignmentOperator) =
+	Map{(#ASSIGN,#ASSIGN),
+			(#PLUS_ASSIGN,#PLUS_ASSIGN),
+			(#MINUS_ASSIGN,#MINUS_ASSIGN),
+			(#TIMES_ASSIGN,#TIMES_ASSIGN),
+			(#DIVISSION_ASSIGN,
+			#DIVISION_ASSIGN),
+			(#AND_ASSIGN,
+			#BITWISE_AND_ASSIGN),
+			(#OR_ASSIGN, 
+			#BITWISE_OR_ASSIGN),
+			(#XOR_ASSIGN,
+			#XOR_ASSIGN),
+			(#SHIFT_LEFT_ASSIGN,
+			#SHIFT_LEFT_ASSIGN),
+			(#SHIFT_RIGHT_ASSIGN,
+			#SHIFT_RIGTH_ASSIGN)};
+	
+helper def: operatorMap: Map(cpp!CppOperator, haxe!HaxeInfixOperators) =
+	Map
+			{(#PLUS,#PLUS),
+			(#MINUS,#MINUS),
+			(#TIMES,#TIMES),
+			(#DIVISION,#DIVISION),
+			(#REMAINDER,#REMAINDER),
+			(#SHIFT_RIGHT,#SHIFT_ARITH),
+			(#SHIFT_LEFT,#SHIFT_LEFT),
+			(#LESS_THAN,#LESS_THAN),
+			(#GREATER_THAN,#GREATER_THAN),
+			(#LESS_EQUALS,#LESS_EQUALS),
+			(#GREATER_EQUALS,#GREATER_EQUALS),
+			(#BIT_OR,#BITWISE_OR),
+			(#BIT_AND,#BITWISE_AND),
+			(#AND,#AND),
+			(#OR,#OR),
+			(#XOR,#XOR),
+			(#EQUALS,#EQ),
+			(#NOT_EQUALS,#NEQ)};
+
+helper def: unaryoperatorMap: Map(cpp!CppUnaryOperator, haxe!HaxePrefixOperators) = Map
+            {(#NOT, #NOT),
+             (#PLUS, #PLUS),
+             (#MINUS, #MINUS),
+             (#INCREMENT, #INCREMENT),
+             (#DECREMENT, #DECREMENT),
+             (#BIT_NOT, #ONECOMPLEMENT)};
+
+rule model {
+	from
+		s : cpp!CppModel
+	to
+		t : haxe!HaxeModel (
+			name <- s.name,
+			sourceFolder <- s.sourceFolder,
+			targetFolder <- s.targetFolder,
+			referenced <- s.orphanTypes -> select(x | x.usagesInTypeAccess ->
+					notEmpty() and x.oclIsKindOf(cpp!CppType) and (not x.
+					oclIsTypeOf(cpp!CppClass)) ) -> collect(x | thisModule.Type(x)) -> asSet(),
+			--elements <- s.elements
+			elements <- s.get_allpackages(),
+			haxeModules <- s.get_classfiles(),
+			mainClass <- s.mainClass
+		)
+}
+
+abstract rule namedElement
+{
+	from
+		s : cpp!CppNamedElement
+	to
+		t : haxe!HaxeNamedElement (
+			name <- s.name
+		)
+}
+
+rule packages extends namedElement {
+	from
+		s : cpp!CppPackage
+	to
+		t : haxe!HaxePackage (
+			parentReference <- s.parentReference,
+			childrenReferences <- s.get_childrenreferences()
+			--childrenReferences <-  s.childrenReferences
+		)
+}
+
+rule modules {
+	from
+		s : cpp!CppClassFile
+	to
+		t : haxe!HaxeModule (
+			name <- s.name,
+			thePackage <- s.parentReference,
+			theElements <- s.elements,
+			dependencies <- s.get_imports()
+			--dependencies <- s.imports
+			--commentList <- s.commentList	
+		)
+}
+
+rule classes extends namedElement {
+	from
+		s : cpp!CppClass
+	to
+		t : haxe!HaxeClass (
+			haxeFields <- s.cppFields->reject(classes | classes.oclIsKindOf(cpp!CppDestructor)),
+			generalization <- s.get_superclass(),
+			typeParameters <- s.typeParameters
+		)
+}
+
+rule typeParameter extends namedElement{
+	from
+		s: cpp!CppTypeParameter
+	to
+		t: haxe!HaxeTypeParameter (
+			bounds <- s.bounds
+		)
+}
+
+lazy rule get_generalization {
+	from
+		s : cpp!CppClass
+	to
+		t : haxe!HaxeClassifierAccess (
+			referencedTerminal <- s
+		)
+}
+
+lazy rule get_classimport {
+	from
+		s : cpp!CppClass
+	to
+		t : haxe!HaxeImportDeclaration (
+			referencedTerminal <- s
+		) 
+}
+
+rule enumTransformation extends namedElement{
+	from
+		s : cpp!CppEnum
+	to
+		t : haxe!HaxeEnum (
+			haxeFields <- s.literals
+		)
+}
+
+rule enumConstructor extends namedElement{
+	from
+		s : cpp!CppEnumConstructor
+	to
+		t : haxe!HaxeEnumConstructor (
+			initializer <- s.expression
+		)
+}
+
+abstract rule abstractFunction {
+	from
+		s : cpp!CppFunction
+	to
+		t : haxe!HaxeAbstractFunction (
+			formalParameters <- s.ownedParameters,
+			-- typeParameters <- s.typeParameter,
+			theBody <- if not (s.functionBody = OclUndefined) then 
+						thisModule.generateBlock(s.functionBody)
+						else 
+						OclUndefined
+						endif			
+		)	
+}
+
+abstract rule abstractOperation extends abstractFunction {
+	from
+		s : cpp!CppFunction
+	to
+		t : haxe!HaxeAbstractOperation(
+			isInline <- s.isInline
+			
+		)	
+}
+
+rule methods extends abstractOperation {
+	from
+		s : cpp!CppMethod
+	to
+		t : haxe!HaxeOperation (
+			isPrivate <- (s.accessSpecifier = #PRIVATE),
+			--isStatic <- s.isConst,
+			isStatic <- (s.linkage = #STATIC),
+			name <- s.name,
+			type <- s.type
+		)
+}
+
+rule constructors extends namedElement {
+	from
+		s : cpp!CppConstructor
+	to
+		t : haxe!HaxeConstructor (
+			isPrivate <- (s.accessSpecifier = #PRIVATE or
+					( s.fieldContainer.oclIsTypeOf(cpp!CppClass) and s.fieldContainer.isAbstract ) ),
+			name <- s.name,
+			formalParameters <- s.ownedParameters,
+			theBody <- if not (s.functionBody = OclUndefined) then 
+						thisModule.generateBlock(s.functionBody)
+						else 
+						OclUndefined
+						endif
+		)
+}
+
+--abstract rule abstractMethodInvocation {
+--	from 
+--		s : cpp!CppAbstractMethodInvocation
+--	to
+--		t : haxe!HaxeAbstractMethodInvocation (
+--			method <- s.method,
+--			arguments <- s.arguments
+--		)		
+--}
+
+--rule methodInvocation extends abstractMethodInvocation {
+rule methodInvocation {
+	from
+		s : cpp!CppMethodInvocation
+	to
+		--t: haxe!HaxeExpressionStatement (
+			--expression <- x
+		--),
+		t : haxe!HaxeMethodInvocation ( 
+			method <- s.method,
+			arguments <- s.arguments,
+			expression <- s.expression	
+		)
+}
+
+--rule superMethodInvocation extends abstractMethodInvocation {
+rule superMethodInvocation {
+	from
+		s : cpp!CppSuperMethodInvocation
+	to
+		t : haxe!HaxeSuperMethodInvocation
+}
+
+--rule superConstructorInvocation extends abstractMethodInvocation {
+rule superConstructorInvocation{
+	from
+		s : cpp!CppSuperConstructorInvocation
+	to
+		t : haxe!HaxeSuperConstructorInvocation
+}
+
+rule classVariables extends namedElement {
+	from
+		s : cpp!CppVariable (
+			( s.isArray = false or ( s.isCharType() ) ) and not ( s.storage = #TYPEDEF )
+		)
+	to
+		t : haxe!HaxeAttribute (
+			isPrivate <- (s.accessSpecifier = #PRIVATE),
+			isStatic <- s.isConst,
+			type <- s.type,
+			initializer <- if( not (s.isPrimitive()) and (s.initializer = OclUndefined) and not (s.vartype = #POINTER) ) then
+								if( s.type.typeHasConstructor() = true ) then
+									thisModule.generateTypeConstructor(s.type)
+								else
+									OclUndefined
+								endif
+							else
+								s.initializer
+							endif
+		)
+}
+
+rule classVariablesArray extends namedElement {
+	from
+		s : cpp!CppVariable (
+			s.isArray = true and not s.isCharType() and not ( s.storage = #TYPEDEF )
+		)
+	to
+		t : haxe!HaxeAttribute (
+			isPrivate <- (s.accessSpecifier = #PRIVATE),
+			isStatic <- s.isConst,
+			type <- s.type,
+			initializer <- arr
+		),
+		arr : haxe!HaxeArrayCreation (
+			dimensions <- s.dimensions,
+			initializer <- s.initializer
+		)
+}
+
+rule variableTypeDef extends namedElement {
+	from
+		s : cpp!CppVariable (
+			s.storage = #TYPEDEF
+		)
+	to
+		t : haxe!HaxeTypedef (
+			refType <- s.type
+		)
+}
+
+rule comments {
+    from
+        s : cpp!CppComment
+    to
+        t : haxe!HaxeComment (
+            content <- s.content,
+            lineComment <- t.singleline
+        )
+}
+
+--abstract rule unaryExpression {
+--    from
+--        s : cpp!CppUnaryExpression
+--    to
+--		t : haxe!HaxeExpressionStatement (
+--			expression <- tmp
+--		), 
+--        tmp : haxe!HaxeUnaryExpression (
+--            operand <- s.expression
+--        )
+--}
+
+--rule prefixExpression extends unaryExpression {
+rule prefixExpression {
+    from
+        s : cpp!CppPrefixExpression
+    to
+        t : haxe!HaxePrefixExpression (
+        	operand <- s.expression,
+            operator <- thisModule.unaryoperatorMap.get(s.operator)
+        )
+}
+
+--rule postfixExpression extends unaryExpression {
+rule postfixExpression{
+    from
+        s : cpp!CppPostfixExpression
+    to
+        t : haxe!HaxePostfixExpression (
+        	operand <- s.expression,
+			isIncrement <- (s.operator = #INCREMENT)
+        )
+}
+
+--abstract rule binaryExpression {
+--	from
+--		s : cpp!CppBinaryExpression
+--	 to
+--        t : haxe!HaxeBinaryExpression (
+--        	leftSide <- s.leftOperand,
+--			rightSide <- s.rightOperand
+--        )
+--}
+
+--rule infixExpression extends binaryExpression {
+rule infixExpression {
+	from
+		s : cpp!CppInfixExpression
+	 to
+        t : haxe!HaxeInfixExpression (
+        	leftSide <- s.leftOperand,
+			rightSide <- s.rightOperand,
+        	operator <- thisModule.operatorMap.get(s.operator)
+        )
+}
+
+--rule assignmentExpression extends binaryExpression {
+rule assignmentExpression{
+	from
+		s : cpp!CppAssignamentStatement
+	 to
+        t : haxe!HaxeAssignment (
+        	leftSide <- s.leftOperand,
+			rightSide <- s.rightOperand,
+        	operator <- thisModule.assignMap.get(s.operator)
+        )
+}
+
+lazy rule generateBlock {
+	from
+		s : cpp!CppBlock (not s = OclUndefined)
+	to
+        t : haxe!HaxeBlock (
+        	statements <- s.get_statements()
+        )
+}
+
+--abstract rule conditionalExpression {
+--	from
+--		s : cpp!CppSelectionStatement
+--	to
+--        t : haxe!HaxeConditionalExpression (
+--        	expression <- s.condition,
+--			thenStatement <- s.statement
+--        )
+--}
+
+--rule ifStatement extends conditionalExpression {
+rule ifStatement {
+	from
+		s : cpp!CppIfStatement
+	 to
+	 	t : haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+	 	u : haxe!HaxeIfStatement (
+	 		expression <- s.condition,
+			thenStatement <- 	if( s.statement.oclIsTypeOf(cpp!CppBlock) ) then
+									thisModule.generateBlock(s.statement)
+								else
+									if( not s.statement.oclIsKindOf(cpp!CppSelectionStatement)) then
+										thisModule.statementize(s.statement)
+									else
+										s.statement
+									endif
+								endif
+	 	)
+}
+
+--rule ifElseStatement extends conditionalExpression {
+rule ifElseStatement {
+	from
+		s : cpp!CppIfElseStatement (not s.inLine)
+	 to
+	 	t : haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+        u : haxe!HaxeIfStatement (
+        	expression <- s.condition,
+			thenStatement <- if( s.statement.oclIsTypeOf(cpp!CppBlock) ) then
+									thisModule.generateBlock(s.statement)
+								else
+									if( not s.statement.oclIsKindOf(cpp!CppSelectionStatement)) then
+										thisModule.statementize(s.statement)
+									else
+										s.statement
+									endif
+								endif,
+        	elseStatement <- 	if( s.elseStatement.oclIsTypeOf(cpp!CppBlock) ) then
+									thisModule.generateBlock(s.elseStatement)
+								else
+									if( not s.elseStatement.oclIsKindOf(cpp!CppSelectionStatement)) then
+										thisModule.statementize(s.elseStatement)
+									else
+										s.elseStatement
+									endif
+								endif	
+        )
+}
+
+--rule ifElseStatementInline extends conditionalExpression {
+rule ifElseStatementInline {
+	from
+		s : cpp!CppIfElseStatement (s.inLine)
+	 to
+        t : haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+        u : haxe!HaxeTernaryExpression (
+        	expression <- s.condition,
+			thenStatement <- if( s.statement.oclIsTypeOf(cpp!CppBlock) ) then
+									thisModule.generateBlock(s.statement)
+								else
+									s.statement
+								endif,
+        	elseExpression <- 	if( s.elseStatement.oclIsTypeOf(cpp!CppBlock) ) then
+									thisModule.generateBlock(s.elseStatement)
+								else
+									s.elseStatement
+								endif	
+        )
+}
+
+abstract rule loopStatement {
+    from
+        s : cpp!CppIterationStatement
+    to
+        t : haxe!HaxeLoopStatement (
+            theBody <- 
+						if not (s.theBody = OclUndefined) then 
+						thisModule.generateBlock(s.theBody)
+						else 
+						OclUndefined
+						endif,
+            expression <- s.condition
+        )
+}
+
+rule doWhileStatement extends loopStatement {
+	from
+		s : cpp!CppDoWhileStatement
+	to 
+		t : haxe!HaxeDoWhileStatement
+}
+
+rule whileStatement extends loopStatement {
+	from
+		s : cpp!CppWhileStatement
+	to 
+		t : haxe!HaxeWhileStatement
+}
+
+lazy rule statementize {
+	from
+		s: cpp!CppExpression
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- s
+		)
+}
+
+rule forStatement {
+	from
+		s: cpp!CppForStatement 
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u: haxe!HaxeBlock (
+			statements <- Sequence{s.initializer, while}
+		),
+		while: haxe!HaxeWhileStatement (
+			expression <- s.condition,
+			theBody <- theBigBody
+		),
+		theBigBody: haxe!HaxeBlock (
+			statements <- s.get_blockStatements(),
+			--statements <- s.theBody,
+			statements <- thisModule.statementize(s.updater)
+		)
+}
+
+rule return {
+	from
+		s : cpp!CppReturnStatement
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeReturn (
+			expression <- s.returnExpression	
+		)
+}
+
+rule breakStatement {
+	from
+		s : cpp!CppBreakStatement
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeBreak
+}
+
+rule continueStatement {
+	from
+		s : cpp!CppContinueStatement
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeContinue
+}
+
+rule stringLiteral {
+	from
+		s : cpp!CppStringLiteral
+	to
+		t : haxe!HaxeStringLiteral ( 
+			escapedValue <- s.literalValue
+		)
+}
+
+rule nullLiteral {
+	from
+		s : cpp!CppNullLiteral
+	to
+		t : haxe!HaxeNullLiteral 
+}
+
+rule booleanLiteral {
+	from
+		s : cpp!CppBooleanLiteral
+	to
+		t : haxe!HaxeBooleanLiteral ( 
+			value <- s.booleanValue
+		)
+}
+
+rule numberLiteral {
+	from
+		s : cpp!CppNumberLiteral
+	to
+		t : haxe!HaxeNumberLiteral ( 
+			value <- s.token
+		)
+}
+
+rule charLiteral {
+	from
+		s : cpp!CppCharacterLiteral
+	to
+		t : haxe!HaxeStringLiteral ( 
+			escapedValue <- s.charValue
+		)
+}
+
+
+rule switch {
+	from
+		s : cpp!CppSwitchExpression
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeSwitch (
+			expression <- s.expression,
+			cases <- s.cases,
+			default <- s.default
+		)
+}
+
+rule case {
+	from
+		s : cpp!CppCase
+	to
+		t : haxe!HaxeCase (
+			values <- s.value,
+			expression <- 	if( s.expression->oclIsKindOf(cpp!CppBlock) ) then
+								thisModule.generateBlock(s.expression)
+							else
+								s.expression
+							endif
+		)
+}
+
+rule try {
+	from 
+		s : cpp!CppTryExpression
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeTryExpression (
+			theBody <- thisModule.generateBlock(s.theBody),
+			catchClause <- s.catchClause
+		)
+}
+
+rule catch {
+	from
+		s : cpp!CppCatchClause
+	to
+		t : haxe!HaxeCatchClause (
+			theBody <- thisModule.generateBlock(s.theBody)
+			--exception
+		) 
+}
+
+rule throw {
+	from
+		s : cpp!CppThrowExpression 
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeThrowExpression ( 
+			expression <- s.expression	
+		)
+}
+
+rule thisExpression {
+	from
+		s : cpp!CppThisExpression
+	to
+		t : haxe!HaxeThisExpression
+}
+
+rule ParenthizedExpression {
+	from
+		s : cpp!CppParenthizedExpression
+	to
+		t : haxe!HaxeParenthizedExpression (
+			expression <- s.expression
+		)
+}
+
+rule regexLiteral {
+	from
+		s : cpp!CppRegexLiteral
+	to
+		t : haxe!HaxeRegexLiteral (
+			patter <- s.pattern,
+			options <- s.options
+		)
+}
+
+
+rule variableDeclarationGroup {
+	from
+		s : cpp!CppVariableDeclarationGroup
+	to
+		t : haxe!HaxeVariableDeclarationGroup (
+			initializer <- 	if( not (s.isPrimitive()) and (s.getInitializer() = OclUndefined) and not (s.isPointer()) ) then
+								if( s.type.typeHasConstructor() = true ) then
+									thisModule.generateTypeConstructor(s.type)
+								else
+									OclUndefined
+								endif
+							else
+								s.getInitializer()
+							endif,
+			fragments <- s.fragments,
+			type <- s.type
+		)
+}
+
+lazy rule generateTypeConstructor {
+	from
+		s : cpp!CppTypeAccess
+	to
+		t : haxe!HaxeMethodInvocation(
+			method <- s.access.getTypeConstructor()
+		)
+}
+
+abstract rule variableDeclaration extends namedElement {
+	from
+		s : cpp!CppVariableDeclaration
+	to
+		t : haxe!HaxeVariableDeclaration (
+			initializer <- s.initializer	
+		)
+}
+
+--rule variableDeclarationFragment extends variableDeclaration {
+rule variableDeclarationFragment extends namedElement {
+	from
+		s : cpp!CppVariableDeclarationFragment (
+			s.isArray = false or s.isCharType()
+		)
+	to
+		t : haxe!HaxeVariableDeclarationFragment 
+}
+
+--rule variableDeclarationFragmentArray extends variableDeclaration {
+	rule variableDeclarationFragmentArray extends namedElement {
+	from
+		s : cpp!CppVariableDeclarationFragment (
+			s.isArray = true and not ( s.isCharType() )
+		) 
+	to
+		t : haxe!HaxeVariableDeclarationFragment (
+			initializer <- arr
+		),
+		arr : haxe!HaxeArrayCreation (
+			dimensions <- s.dimensions,
+			initializer <- s.initializer
+		)
+}
+
+rule singleVariableDeclaration extends variableDeclaration{
+	from
+		s : cpp!CppSingleVariableDeclaration
+	to
+		t : haxe!HaxeSingleVariableDeclaration (
+			catchClause <- s.catchClause,
+			type <- s.type
+		)
+}
+
+rule declarationExpression {
+	from
+		s : cpp!CppDeclarationExpression 
+	to
+		t: haxe!HaxeExpressionStatement (
+			expression <- u
+		),
+		u : haxe!HaxeVariableDeclarationExpression (
+			groups <- s.groups
+		)
+}
+
+rule arrayAccess {
+	from
+		s : cpp!CppArrayAccess
+	to
+		t : haxe!HaxeArrayAccess (
+			array <- s.array,
+			index <- s.index
+		)
+}
+
+rule arrayInitializer {
+	from
+		s : cpp!CppArrayInitializer
+	to
+		t : haxe!HaxeArrayInitializer (
+			expressions <- s.expressions
+		)
+}
+
+rule fieldAccess {
+	from
+		s : cpp!CppFieldAccess
+	to
+		t : haxe!HaxeFieldAccess (
+			field <- s.field,
+			expression <- s.expression
+		)
+}
+
+rule variableAccess {
+	from
+		s : cpp!CppVariableAccess
+	to
+		t : haxe!HaxeSingleVariableAccess (
+			variable <- s.variable
+		)
+}
+
+rule typeAccessClass {
+	from
+		s : cpp!CppTypeAccess (
+			not (s.access = OclUndefined) and ( s.access->oclIsKindOf(cpp!CppClassifier) or s.access->oclIsKindOf(cpp!CppVariable))
+		)
+	to
+		t : haxe!HaxeClassifierAccess (
+			referencedTerminal <- s.access,
+			parameterMapping <- s.parameterMapping
+		)
+}
+
+rule castRule {
+	from
+		s : cpp!CppCastExpression
+	to
+		t : haxe!HaxeCastingExpression (
+			type <- s.type,
+			expression <- s.expression
+		)
+}
+
+rule typeAccessPrimitive {
+	from
+		s : cpp!CppTypeAccess (
+			not (s.access = OclUndefined) and s.access->oclIsKindOf(cpp!CppPrimitiveType)
+		)
+	to
+		t : haxe!HaxeClassifierAccess (
+			referencedTerminal <- thisModule.Type(s.access)
+		)
+}
+
+unique lazy abstract rule Type {
+	from
+		s: cpp!CppType (
+			s.usagesInTypeAccess -> notEmpty()
+		)
+	to
+		t: haxe!HaxeClassifier
+		(
+		)
+}
+
+unique lazy rule primitiveVoid extends Type{
+	from
+		s : cpp!CppVoidType
+	to
+		t : haxe!HaxeEnum ( -- Consultar porque era HaxeEnum
+			name <- 'Void'
+		)
+}
+
+unique lazy rule primitiveInteger extends Type{
+	from
+		s : cpp!CppIntType
+	to
+		t : haxe!HaxeClass (
+			name <- 'Int'
+		)
+}
+
+unique lazy rule primitiveLong extends Type{
+	from
+		s : cpp!CppLongType
+	to
+		t : haxe!HaxeClass (
+			name <- 'Int'
+		)
+}
+
+unique lazy rule primitiveShort extends Type{
+	from
+		s : cpp!CppShortType
+	to
+	t : haxe!HaxeClass (
+		name <- 'Int'
+	)
+}
+
+unique lazy rule primitiveBoolean extends Type{
+	from
+		s : cpp!CppBooleanType
+	to
+		t : haxe!HaxeClass (
+			name <- 'Bool'
+		)
+}
+
+unique lazy rule primitiveChar extends Type{
+	from
+		s : cpp!CppCharType
+	to
+	t : haxe!HaxeClass (
+		name <- 'String'
+	)
+}
+
+unique lazy rule primitiveFloat extends Type{
+	from
+		s : cpp!CppFloatType
+	to
+		t : haxe!HaxeClass (
+			name <- 'Float'
+		)
+}
+
+unique lazy rule primitiveDouble extends Type{
+	from
+		s : cpp!CppDoubleType
+	to
+		t : haxe!HaxeClass (
+			name <- 'Float'
+		)
+}
+
+unique lazy rule primitiveSigned extends Type{
+from
+	s : cpp!CppSignedType
+to
+	t : haxe!HaxeClass (
+		name <- 'Int'
+	)
+}
+
+unique lazy rule primitiveUnsigned extends Type{
+	from
+		s : cpp!CppUnsignedType
+	to
+		t : haxe!HaxeClass (
+			name <- 'UInt'
+		)
+}

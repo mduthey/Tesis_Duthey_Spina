@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<meta title="PingPongTesis" package="me.pingpongtesis" version="1.0.0" />
+	
+	<!-- output -->
+	<app main="defaultpkg.Main" file="PingPongTesis" path="bin" />
+	
+	<window background="#333333" fps="60" />
+	<window width="400" height="600" unless="mobile" />
+	<!--<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />-->
+	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />
+	<window if="desktop" resizable="false" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="bitmapFont" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>

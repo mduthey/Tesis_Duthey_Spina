@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<org.eclipse.emf.ecore.haxe:HaxeModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.eclipse.emf.ecore.haxe="http://haxe.unicen.edu.ar" name="Proyecto Ejemplo" targetFolder="build" mainClass="//@elements.0/@childrenReferences.0">
+  <elements xsi:type="org.eclipse.emf.ecore.haxe:HaxePackage" name="defaultpkg">
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="RectangleTesis" containerModule="//@haxeModules.0">
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="display" isStatic="true">
+        <formalParameters name="n">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.1/@childrenReferences.0/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeStringLiteral" escapedValue="&quot;Area: %d&quot;"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.0/@formalParameters.0"/>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="main" isStatic="true">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeVariableDeclarationExpression">
+              <groups>
+                <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@elements.0/@childrenReferences.1"/>
+                <initializer xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.1/@haxeFields.4"/>
+                <fragments name="rect"/>
+              </groups>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.1/@haxeFields.2">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="3"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="4"/>
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.0/@haxeFields.0">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.1/@haxeFields.3">
+                <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.0/@haxeFields.1/@theBody/@statements.0/@expression/@groups.0/@fragments.0"/>
+              </arguments>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeReturn">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeNumberLiteral" value="0"/>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+    </childrenReferences>
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="Rectangle" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.1/@theBody/@statements.0/@expression/@groups.0/@type" containerModule="//@haxeModules.0">
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="width" isPrivate="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeAttribute" name="height" isPrivate="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="set_values">
+        <formalParameters name="x">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+        </formalParameters>
+        <formalParameters name="y">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+              <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.0"/>
+              <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.2/@formalParameters.0"/>
+            </expression>
+          </statements>
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeAssignment">
+              <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.1"/>
+              <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.2/@formalParameters.1"/>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="area">
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeReturn">
+              <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeInfixExpression" operator="*">
+                <leftSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.0"/>
+                <rightSide xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.1"/>
+              </expression>
+            </expression>
+          </statements>
+        </theBody>
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeConstructor" name="Rectangle">
+        <formalParameters name="x">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+        </formalParameters>
+        <formalParameters name="y">
+          <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.1"/>
+        </formalParameters>
+        <theBody xsi:type="org.eclipse.emf.ecore.haxe:HaxeBlock">
+          <statements xsi:type="org.eclipse.emf.ecore.haxe:HaxeExpressionStatement">
+            <expression xsi:type="org.eclipse.emf.ecore.haxe:HaxeMethodInvocation" method="//@elements.0/@childrenReferences.1/@haxeFields.2">
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.4/@formalParameters.0"/>
+              <arguments xsi:type="org.eclipse.emf.ecore.haxe:HaxeSingleVariableAccess" variable="//@elements.0/@childrenReferences.1/@haxeFields.4/@formalParameters.1"/>
+            </expression>
+          </statements>
+        </theBody>
+      </haxeFields>
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeConstructor" name="Rectangle"/>
+    </childrenReferences>
+  </elements>
+  <elements xsi:type="org.eclipse.emf.ecore.haxe:HaxePackage" name="system">
+    <childrenReferences xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="CPPAutoGen" containerModule="//@haxeModules.1">
+      <haxeFields xsi:type="org.eclipse.emf.ecore.haxe:HaxeOperation" name="printf" isStatic="true">
+        <type xsi:type="org.eclipse.emf.ecore.haxe:HaxeClassifierAccess" referencedTerminal="//@referenced.0"/>
+      </haxeFields>
+    </childrenReferences>
+  </elements>
+  <referenced xsi:type="org.eclipse.emf.ecore.haxe:HaxeEnum" name="Void" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.0/@type //@elements.0/@childrenReferences.1/@haxeFields.2/@type //@elements.1/@childrenReferences.0/@haxeFields.0/@type"/>
+  <referenced xsi:type="org.eclipse.emf.ecore.haxe:HaxeClass" name="Int" referencedIn="//@elements.0/@childrenReferences.0/@haxeFields.0/@formalParameters.0/@type //@elements.0/@childrenReferences.0/@haxeFields.1/@type //@elements.0/@childrenReferences.1/@haxeFields.0/@type //@elements.0/@childrenReferences.1/@haxeFields.1/@type //@elements.0/@childrenReferences.1/@haxeFields.2/@formalParameters.0/@type //@elements.0/@childrenReferences.1/@haxeFields.2/@formalParameters.1/@type //@elements.0/@childrenReferences.1/@haxeFields.3/@type //@elements.0/@childrenReferences.1/@haxeFields.4/@formalParameters.0/@type //@elements.0/@childrenReferences.1/@haxeFields.4/@formalParameters.1/@type"/>
+  <haxeModules name="RectangleTesis" thePackage="//@elements.0" theElements="//@elements.0/@childrenReferences.0 //@elements.0/@childrenReferences.1"/>
+  <haxeModules name="CPPAautogen" thePackage="//@elements.1" theElements="//@elements.1/@childrenReferences.0"/>
+</org.eclipse.emf.ecore.haxe:HaxeModel>
